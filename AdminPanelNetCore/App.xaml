@@ -1,0 +1,40 @@
+﻿<Application x:Class="AdminPanelNetCore.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AdminPanelNetCore"
+             xmlns:VM="clr-namespace:AdminPanelNetCore.ViewModel"
+             xmlns:views="clr-namespace:AdminPanelNetCore.View.Pages">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="View/Style/StyleDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type VM:BranchesVM}">
+                <views:Branches/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:LangVM}">
+                <views:LangControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:DepartamentVM}">
+                <views:Departament/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:UsersControlVM}">
+                <views:UsersControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:OptionsControlVM}">
+                <views:OptionsControl/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:OptionsTvVM}">
+                <views:OptionsTV/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type VM:TerminalServiceVM}">
+                <views:TerminalService/>
+            </DataTemplate>
+
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

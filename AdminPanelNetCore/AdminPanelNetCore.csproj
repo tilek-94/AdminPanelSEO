@@ -1,0 +1,132 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>2416668.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Icon\2416668.png" />
+    <None Remove="Images\Icon\Clear.png" />
+    <None Remove="Images\Icon\delete_250px.png" />
+    <None Remove="Images\Icon\Edit.png" />
+    <None Remove="Images\Icon\Logo2.png" />
+    <None Remove="Images\Icon\multiply.png" />
+    <None Remove="Images\Icon\search.png" />
+    <None Remove="Images\Icon\search2.png" />
+    <None Remove="Images\Icon\udalit4.png" />
+    <None Remove="Images\Icon\White_Logo.png" />
+    <None Remove="Images\Img\abs.png" />
+    <None Remove="Images\Img\business_building_48px.png" />
+    <None Remove="Images\Img\Close.png" />
+    <None Remove="Images\Img\coding.png" />
+    <None Remove="Images\Img\company_32px.png" />
+    <None Remove="Images\Img\company_48px.png" />
+    <None Remove="Images\Img\depar.png" />
+    <None Remove="Images\Img\Department.png" />
+    <None Remove="Images\Img\language_250px.png" />
+    <None Remove="Images\Img\menu_24px.png" />
+    <None Remove="Images\Img\menu_32px.png" />
+    <None Remove="Images\Img\Mininmized.png" />
+    <None Remove="Images\Img\office-building.png" />
+    <None Remove="Images\Img\order_history_48px.png" />
+    <None Remove="Images\Img\pass.png" />
+    <None Remove="Images\Img\print.png" />
+    <None Remove="Images\Img\printer.png" />
+    <None Remove="Images\Img\private_lock_250px.png" />
+    <None Remove="Images\Img\resume_48px.png" />
+    <None Remove="Images\Img\select.png" />
+    <None Remove="Images\Img\settings.png" />
+    <None Remove="Images\Img\sleep_250px.png" />
+    <None Remove="Images\Img\sound.png" />
+    <None Remove="Images\Img\Svernut.png" />
+    <None Remove="Images\Img\time.png" />
+    <None Remove="Images\Img\timesheet_48px.png" />
+    <None Remove="Images\Img\tv.png" />
+    <None Remove="Images\Img\value.png" />
+    <None Remove="Images\Img\Без названия.jpg" />
+    <None Remove="Images\Img\Без названия.png" />
+    <None Remove="Images\Just_Image\Branches.png" />
+    <None Remove="Images\Just_Image\Person.JPG" />
+    <None Remove="Images\Just_Image\RSK.JPG" />
+    <None Remove="Images\Just_Image\rsk.png" />
+    <None Remove="Images\Just_Image\RSK1" />
+    <None Remove="Images\Just_Image\rsk1.png" />
+    <None Remove="Images\Just_Image\rsk2.png" />
+    <None Remove="Images\Just_Image\translate.png" />
+    <None Remove="Images\Just_Image\workers.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="2416668.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.32">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.32">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Icon\2416668.png" />
+    <Resource Include="Images\Icon\Clear.png" />
+    <Resource Include="Images\Icon\delete_250px.png" />
+    <Resource Include="Images\Icon\Edit.png" />
+    <Resource Include="Images\Icon\Logo2.png" />
+    <Resource Include="Images\Icon\multiply.png" />
+    <Resource Include="Images\Icon\search.png" />
+    <Resource Include="Images\Icon\search2.png" />
+    <Resource Include="Images\Icon\udalit4.png" />
+    <Resource Include="Images\Icon\White_Logo.png" />
+    <Resource Include="Images\Img\abs.png" />
+    <Resource Include="Images\Img\business_building_48px.png" />
+    <Resource Include="Images\Img\Close.png" />
+    <Resource Include="Images\Img\coding.png" />
+    <Resource Include="Images\Img\company_32px.png" />
+    <Resource Include="Images\Img\company_48px.png" />
+    <Resource Include="Images\Img\depar.png" />
+    <Resource Include="Images\Img\Department.png" />
+    <Resource Include="Images\Img\language_250px.png" />
+    <Resource Include="Images\Img\menu_24px.png" />
+    <Resource Include="Images\Img\menu_32px.png" />
+    <Resource Include="Images\Img\Mininmized.png" />
+    <Resource Include="Images\Img\office-building.png" />
+    <Resource Include="Images\Img\order_history_48px.png" />
+    <Resource Include="Images\Img\pass.png" />
+    <Resource Include="Images\Img\print.png" />
+    <Resource Include="Images\Img\printer.png" />
+    <Resource Include="Images\Img\private_lock_250px.png" />
+    <Resource Include="Images\Img\resume_48px.png" />
+    <Resource Include="Images\Img\select.png" />
+    <Resource Include="Images\Img\settings.png" />
+    <Resource Include="Images\Img\sleep_250px.png" />
+    <Resource Include="Images\Img\sound.png" />
+    <Resource Include="Images\Img\Svernut.png" />
+    <Resource Include="Images\Img\time.png" />
+    <Resource Include="Images\Img\timesheet_48px.png" />
+    <Resource Include="Images\Img\tv.png" />
+    <Resource Include="Images\Img\value.png" />
+    <Resource Include="Images\Img\Без названия.jpg" />
+    <Resource Include="Images\Img\Без названия.png" />
+    <Resource Include="Images\Just_Image\Branches.png" />
+    <Resource Include="Images\Just_Image\Person.JPG" />
+    <Resource Include="Images\Just_Image\RSK.JPG" />
+    <Resource Include="Images\Just_Image\rsk.png" />
+    <Resource Include="Images\Just_Image\RSK1" />
+    <Resource Include="Images\Just_Image\rsk1.png" />
+    <Resource Include="Images\Just_Image\rsk2.png" />
+    <Resource Include="Images\Just_Image\translate.png" />
+    <Resource Include="Images\Just_Image\workers.png" />
+  </ItemGroup>
+
+</Project>

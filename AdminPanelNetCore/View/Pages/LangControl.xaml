@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="AdminPanelNetCore.View.Pages.LangControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdminPanelNetCore.View.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid x:Name="MainGrid">
+        <Border Padding="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Canvas>
+                        <Image Source="../../Images/Just_Image/translate.png" Width="110" Height="120" Canvas.Left="17" Canvas.Top="26"/>
+                        <TextBlock x:Name="FilialNameT" Text="Язык"  Canvas.Left="278" Canvas.Top="50" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                        <TextBox Text="{Binding Locale}" FontSize="14"  Style="{DynamicResource textbox_style}" Tag="Название филиала" Height="24" Width="254" Canvas.Left="330" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <TextBlock x:Name="Filial" Canvas.Left="238" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Language="ky-kg" Text="Активность"/></TextBlock>
+                        <ComboBox Canvas.Left="328" Text="{Binding IsActive}" Canvas.Top="84" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <TextBlock Text="Скрытый"/>
+                            <TextBlock Text="Активный"/>
+                        </ComboBox>
+                        <Button Command="{Binding EditCommand}" Style="{DynamicResource ButtonStyle}" Content="Изменить" Canvas.Left="476" Canvas.Top="132" />
+                        <Button Command="{Binding AddDataCommand}" Style="{DynamicResource ButtonStyle}" Content="Сохранить" Canvas.Left="311" Canvas.Top="132" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    </Canvas>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <DataGrid x:Name="DataList"  Margin="10,7,0,0" 
+                              FontSize="12"  CanUserAddRows="False"   
+                              HeadersVisibility="Column" 
+                              Style="{DynamicResource grid_xml}" 
+                              ColumnHeaderStyle="{DynamicResource hederstyle}" 
+                              ItemsSource="{Binding LangList}" 
+                              SelectedItem="{Binding SelectedData}"
+                              VerticalAlignment="Stretch" 
+                              VerticalScrollBarVisibility="Auto"   
+                              IsReadOnly="True"
+                              AutoGenerateColumns="False" >
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn  Header="№" Width="50" Binding="{Binding Id}"/>
+                            <DataGridTextColumn x:Name="FiliNameDG" Header="Язык"  Binding="{Binding Locale}"/>
+                            <DataGridTemplateColumn  Header="Активность"  >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding IsActive}" Value="1">
+                                                            <Setter Property="Text" Value="Активный" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding IsActive}" Value="0">
+                                                            <Setter Property="Text" Value="скрытый" />
+                                                        </DataTrigger>
+
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn x:Name="DeleteDG1" Header="Изменить" Width="150" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button
+                                            Style="{DynamicResource Close_Button}" BorderThickness="0,0,0,0" Cursor="Hand">
+                                            <Image Source="../../Images/Icon/Edit.png" Width="20"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn x:Name="DeleteDG" Header="Удалить" Width="150" >
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button 
+                                            Command="{Binding Path=DataContext.DeleteCommand, RelativeSource= {RelativeSource FindAncestor,
+                 AncestorType={x:Type DataGrid}}}" 
+                                            Style="{DynamicResource Close_Button}" BorderThickness="0,0,0,0"  Cursor="Hand">
+                                            <Image Source="../../Images/Icon/udalit4.png" Width="20"/>
+                                        </Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

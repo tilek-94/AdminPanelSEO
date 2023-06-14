@@ -1,0 +1,6 @@
+D:\project\ElectronSystem\NewElectronSystems\NetCore3.1\AdminPanelNetCore\AdminPanelNetCore\obj\Debug\net6.0-windows\AdminPanelNetCore.csproj.AssemblyReference.cache
+D:\project\ElectronSystem\NewElectronSystems\NetCore3.1\AdminPanelNetCore\AdminPanelNetCore\obj\Debug\net6.0-windows\View\Style\StyleDictionary.baml
+D:\project\ElectronSystem\NewElectronSystems\NetCore3.1\AdminPanelNetCore\AdminPanelNetCore\obj\Debug\net6.0-windows\View\MainWindow.g.cs
+D:\project\ElectronSystem\NewElectronSystems\NetCore3.1\AdminPanelNetCore\AdminPanelNetCore\obj\Debug\net6.0-windows\View\Pages\Branches.g.cs
+D:\project\ElectronSystem\NewElectronSystems\NetCore3.1\AdminPanelNetCore\AdminPanelNetCore\obj\Debug\net6.0-windows\AdminPanelNetCore_MarkupCompile.cache
+D:\project\ElectronSystem\NewElectronSystems\NetCore3.1\AdminPanelNetCore\AdminPanelNetCore\obj\Debug\net6.0-windows\AdminPanelNetCore_MarkupCompile.lref

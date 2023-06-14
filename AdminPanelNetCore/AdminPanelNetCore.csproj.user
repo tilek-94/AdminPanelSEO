@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\Pages\Branches.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pages\Departament.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pages\LangControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pages\OptionsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pages\OptionsTV.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pages\TerminalService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Pages\UsersControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowViews\Identification.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\WindowViews\MessageOk.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Branches.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\Departament.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\LangControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\OptionsControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\OptionsTV.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\TerminalService.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\UsersControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Style\StyleDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowViews\Identification.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\WindowViews\MessageOk.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

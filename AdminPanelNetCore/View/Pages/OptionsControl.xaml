@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="AdminPanelNetCore.View.Pages.OptionsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdminPanelNetCore.View.Pages"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <GroupBox Header="Настройка по умолчанию язык телевизора и терминала" 
+                  BorderBrush="#C8C8C8" Height="150" Margin="20,20,20,0"  BorderThickness="1">
+                <StackPanel Orientation="Horizontal" Height="140" Margin="50,0,0,0">
+                    <Image Source="../../Images/Just_Image/translate.png" Width="70" Height="90" />
+                    <StackPanel Margin="50,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Margin="10,10,0,0" Text="Язык по умолчанию"  Width="178"/>
+                            <TextBlock Margin="0,10,0,10" Text="{Binding Locale}"  />
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="10,0,0,0" Text="Введите секунду "  Width="178"/>
+                            <ComboBox ItemsSource="{Binding LangList}"  
+                                      SelectedItem="{Binding SelectedData}"
+                                       DisplayMemberPath="Locale"
+                                      Width="254" IsReadOnly="True" />
+                        </StackPanel>
+
+                        <Button Command="{Binding SaveLangCommand}"  Style="{DynamicResource ButtonStyle}" Content="Сохранить" Margin="85,10,0,0"  />
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Настройка выбора очереди" 
+                  BorderBrush="#C8C8C8" Height="170" Margin="20"  BorderThickness="1">
+                <StackPanel Orientation="Horizontal" Height="140" Margin="50,0,0,0">
+                    <Image Source="../../Images/Img/select.png" Width="90" Height="90" />
+
+                    <StackPanel Orientation="Horizontal" Margin="50,0,0,0">
+                        <TextBlock  Margin="10,60,0,0" Text="Состояние выбора очереди"  Width="198"/>
+                        <ToggleButton x:Name="ToggleButton" Style="{DynamicResource Togle_Button}" 
+                                      IsChecked="{Binding IsCheck}" 
+                                      CommandParameter="{Binding ElementName=ToggleButton}"
+                                       Command="{Binding SelectedCallCommand}"/>
+                        <TextBlock  Margin="10,60,0,0" Text="{Binding StateCheck}"  Width="198"/>
+
+                    </StackPanel>
+
+
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Настройка автовызов оператора" 
+                  BorderBrush="#C8C8C8" Height="150" Margin="20,0,20,20"  BorderThickness="1">
+                <StackPanel Orientation="Horizontal" Height="140" Margin="50,0,0,0">
+                    <Image Source="../../Images/Img/time.png" Width="90" Height="90" />
+                    <StackPanel Margin="50,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Margin="10,10,0,0" Text="Автовызов через"  Width="178"/>
+                            <TextBlock Margin="0,10,0,10" Text="{Binding CustomerCall}"  />
+                            <TextBlock  Margin="10,10,0,0" Text="Секунд"  Width="178"/>
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock Margin="10,0,0,0" Text="Введите секунду "  Width="178"/>
+                            <TextBox Text="{Binding CustomerText}" PreviewTextInput="NumberValidationTextBox" FontSize="14"  Style="{DynamicResource textbox_style}" Tag="Введите секунду" Height="24" Width="254" Canvas.Left="473" Canvas.Top="79"/>
+
+
+                        </StackPanel>
+
+                        <Button Command="{Binding AddCustumerCommand}"  Style="{DynamicResource ButtonStyle}" Content="Сохранить" Margin="85,10,0,0"  />
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Настройка чек принтера" 
+                  BorderBrush="#C8C8C8" Height="150" Margin="20,0,20,20"  BorderThickness="1">
+                <StackPanel Orientation="Horizontal" Height="140" Margin="50,0,0,0">
+                    <Image Source="../../Images/Img/printer.png" Width="90" Height="90" />
+                    <StackPanel Margin="50,0,0,0">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock  Margin="10,10,0,0" Text="Осталась чековая лента"  Width="178"/>
+                            <TextBlock Margin="0,10,0,10" Text="{Binding PaperSizeText}"  />
+                            <TextBlock  Margin="10,10,0,0" Text="метр"  Width="178"/>
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock Margin="10,0,0,0" Text="Метр чековой ленты "  Width="178"/>
+                            <TextBox  Text="{Binding PaperSize}" PreviewTextInput="NumberValidationTextBox" FontSize="14"  Style="{DynamicResource textbox_style}" Tag="Введите метр чековой ленты" Height="24" Width="254" Canvas.Left="473" Canvas.Top="79"/>
+
+
+                        </StackPanel>
+
+                        <Button Command="{Binding AddPaperSizeCommand}"  Style="{DynamicResource ButtonStyle}" Content="Сохранить" Margin="85,10,0,0"  />
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>
